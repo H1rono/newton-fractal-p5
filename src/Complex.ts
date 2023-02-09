@@ -70,8 +70,10 @@ class Complex {
 
     mulMut(o: Complex | number): Complex {
         let x = typeof o === "number" ? Complex.fromNumber(o) : o;
-        this.re = this.re * x.re - this.im * x.im;
-        this.im = this.re * x.im + this.im * x.re;
+        const re = this.re * x.re - this.im * x.im;
+        const im = this.re * x.im + this.im * x.re;
+        this.re = re;
+        this.im = im;
         return this;
     }
 
