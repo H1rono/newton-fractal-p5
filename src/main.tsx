@@ -22,7 +22,7 @@ const MySketch = ({ canvasSize }: ComponentProps) => {
         // z^3 - 1 = 0
         // z_{n+1} = z_n - (z_n^3 - 1) / 3z_n^2 = 2/3 z_n + 1/3z_n^2
         const lhs = z.mul(2 / 3);
-        const rhs = Complex.fromNumber(1 / 3).div(z.mul(z));
+        const rhs = Complex.fromNumber(1 / 3).divMut(z.mul(z));
         return lhs.add(rhs);
     };
 
