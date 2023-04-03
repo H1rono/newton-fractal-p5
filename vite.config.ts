@@ -8,6 +8,7 @@ export default defineConfig({
     test: {
         coverage: {
             provider: "c8",
+            reportsDirectory: "./coverage",
             reporter: "lcovonly",
         },
     },
